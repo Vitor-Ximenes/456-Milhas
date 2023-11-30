@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <title>456 Milhas</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__logo"><i class="bi bi-airplane"></i>456 Milhas</div>
+    <ul class="nav__links">
+      <li class="link"><a href="#">Início</a></li>
+      <li class="link"><a href="#footer">Sobre</a></li>
+      <li class="link"><a href="#cuidados">Cuidados</a></li>
+      <li class="link"><a href="#melhores_viagens">Melhores Viagens</a></li>
+      <li class="link"><a href="#destinos">Destinos</a></li>
+    </ul>
+    <button class="btn" onclick="openContactPopup()">Contato</button>
+    <button class="btn" onclick="openLoginPopup()">Login</button>
+  </nav>
+  <header class="section__container header__container">
+    <h1 class="section__header">Encontre e Reserve<br />Uma Ótima Experiência</h1>
+    <img src="assets/header.jpg" alt="cabeçalho" />
+  </header>
+
+  <section id="destinos" class="section__container booking__container">
+    <div class="booking__nav">
+      <span>Classe Econômica</span>
+      <span>Classe Executiva</span>
+      <span>Primeira Classe</span>
+    </div>
+    <form>
+      <div class="form__group">
+        <span><i class="ri-map-pin-line"></i></span>
+        <div class="input__content">
+          <div class="input__group">
+            <input type="text" id="Localizacao" autocomplete="off" />
+            <label>Localização</label>
+          </div>
+          <p>Onde você está indo?</p>
+        </div>
+      </div>
+      <div class="form__group">
+        <span><i class="ri-user-3-line"></i></span>
+        <div class="input__content">
+          <div class="input__group">
+            <input type="number" id="Viajantes" />
+            <label>Viajantes</label>
+          </div>
+          <p>Adicione hóspedes</p>
+        </div>
+      </div>
+      <div class="form__group">
+        <span><i class="ri-calendar-line"></i></span>
+        <div class="input__content">
+          <div class="input__group">
+            <input type="date" id="Partida" />
+            <label>Partida</label>
+          </div>
+          <p>Adicione a data</p>
+        </div>
+      </div>
+      <div class="form__group">
+        <span><i class="ri-calendar-line"></i></span>
+        <div class="input__content">
+          <div class="input__group">
+            <input type="date" id="Retorno" />
+            <label>Retorno</label>
+          </div>
+          <p>Adicione a data</p>
+        </div>
+      </div>
+      <button class="btn"><i class="ri-search-line"></i></button>
+    </form>
+  </section>
+
+  <section class="section__container plan__container">
+    <p class="subheader">APOIO À VIAGEM</p>
+    <h2 class="section__header">Planeje sua viagem com confiança</h2>
+    <p class="description">
+      Encontre ajuda com suas reservas e planos de viagem, e veja o que esperar
+      ao longo da sua jornada.
+    </p>
+    <div class="plan__grid">
+      <div class="plan__content">
+        <span class="number">01</span>
+        <h4>Requisitos de Viagem para Dubai</h4>
+        <p>
+          Mantenha-se informado e preparado para sua viagem a Dubai com requisitos
+          essenciais de viagem, garantindo uma experiência tranquila e sem problemas
+          nesta cidade vibrante e cativante.
+        </p>
+        <span class="number">02</span>
+        <h4>Seguro de Viagem Multi-riscos</h4>
+        <p>
+          Proteção abrangente para sua tranquilidade, cobrindo uma variedade de
+          riscos de viagem potenciais e situações inesperadas.
+        </p>
+        <span class="number">03</span>
+        <h4>Requisitos de Viagem por Destinos</h4>
+        <p>
+          Mantenha-se informado e planeje sua viagem com facilidade, pois fornecemos
+          informações atualizadas sobre requisitos de viagem específicos para seus
+          destinos desejados.
+        </p>
+      </div>
+      <div class="plan__image">
+        <img src="assets/plan-1.jpg" alt="plano" />
+        <img src="assets/plan-2.jpg" alt="plano" />
+        <img src="assets/plan-3.jpg" alt="plano" />
+      </div>
+    </div>
+  </section>
+
+  <section class="memories">
+    <div class="section__container memories__container">
+      <div class="memories__header">
+        <h2 class="section__header">
+          Viaje para criar memórias ao redor do mundo
+        </h2>
+      </div>
+      <div class="memories__grid">
+        <div class="memories__card">
+          <span><i class="ri-calendar-2-line"></i></span>
+          <h4>Reserve & Relaxe</h4>
+          <p>
+            Com "Reserve e Relaxe", você pode relaxar e aproveitar a
+            jornada enquanto cuidamos de tudo o mais.
+          </p>
+        </div>
+        <div class="memories__card">
+          <span><i class="ri-shield-check-line"></i></span>
+          <h4>Checklist Inteligente</h4>
+          <p>
+            Apresentamos o Checklist Inteligente, a solução inovadora
+            revolucionando a maneira como você viaja com nossa companhia aérea.
+          </p>
+        </div>
+        <div class="memories__card">
+          <span><i class="ri-bookmark-2-line"></i></span>
+          <h4>Economize Mais</h4>
+          <p>
+            De preços de passagens com desconto a promoções exclusivas e ofertas,
+            priorizamos a acessibilidade sem comprometer a qualidade.
+          </p>
+        </div>
+        <div class="memories__card">
+          <span><i class="ri-map-pin-line"></i></span>
+          <h4>Planejamento Personalizado</h4>
+          <p>
+            Não perca tempo planejando sua viagem, nosso assistente virtual te ajuda a
+            encontrar os melhores destinos.
+          </p>
+        </div>
+        <div class="memories__card">
+          <span><i class="ri-star-half-fill"></i></span>
+          <h4>Avalie Seus Destinos</h4>
+          <p>
+            Conheça as opiniões dos passageiros que já usaram nossos serviços e
+            descubra se é o seu próximo destino!
+          </p>
+        </div>
+        <div class="memories__card">
+          <span><i class="ri-user-heart-line"></i></span>
+          <h4>Você é um membro da família?</h4>
+          <p>
+            Você tem familiares ou amigos que também gostam de voar?
+            Registre-se agora para ter acesso a benefícios especiais.
+          </p>
+        </div>
+      </div>
+  </section>
+
+  <section id="cuidados" class="section__container lounge__container">
+    <div class="lounge__image">
+      <img src="assets/lounge-1.jpg" alt="sala vip" />
+      <img src="assets/lounge-2.jpg" alt="sala vip" />
+    </div>
+    <div class="lounge__content">
+      <h2 class="section__header">Sala VIP para Menores Desacompanhados</h2>
+      <div class="lounge__grid">
+        <div class="lounge__details">
+          <h4>Experimente a Tranquilidade</h4>
+          <p>
+            O Serenity Haven oferece uma fuga tranquila, com assentos confortáveis,
+            ambiente calmante e serviço atencioso.
+          </p>
+        </div>
+        <div class="lounge__details">
+          <h4>Elevando Sua Experiência</h4>
+          <p>
+            Projetada para viajantes exigentes, esta sala exclusiva oferece
+            amenidades premium, assistência e espaços de trabalho privativos.
+          </p>
+        </div>
+        <div class="lounge__details">
+          <h4>Um Espaço Acolhedor</h4>
+          <p>
+            Criando uma atmosfera amigável para a família, a Zona Família é o
+            refúgio perfeito para pais e crianças.
+          </p>
+        </div>
+        <div class="lounge__details">
+          <h4>Um Delírio Culinário</h4>
+          <p>
+            Immerja-se em um mundo de sabores, oferecendo cozinhas internacionais,
+            pratos gourmet e bebidas cuidadosamente selecionadas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="melhores_viagens" class="section__container travellers__container">
+    <h2 class="section__header">Melhores Viajantes do Mês</h2>
+    <div class="travellers__grid">
+      <div class="travellers__card">
+        <img src="assets/traveller-1.jpg" alt="viajante" />
+        <div class="travellers__card__content">
+          <img src="assets/client-1.jpg" alt="cliente" />
+          <h4>Emily Johnson</h4>
+          <p>Dubai</p>
+        </div>
+      </div>
+      <div class="travellers__card">
+        <img src="assets/traveller-2.jpg" alt="viajante" />
+        <div class="travellers__card__content">
+          <img src="assets/client-2.jpg" alt="cliente" />
+          <h4>David Smith</h4>
+          <p>Paris</p>
+        </div>
+      </div>
+      <div class="travellers__card">
+        <img src="assets/traveller-3.jpg" alt="viajante" />
+        <div class="travellers__card__content">
+          <img src="assets/client-3.jpg" alt="cliente" />
+          <h4>Olivia Brown</h4>
+          <p>Cingapura</p>
+        </div>
+      </div>
+      <div class="travellers__card">
+        <img src="assets/traveller-4.jpg" alt="viajante" />
+        <div class="travellers__card__content">
+          <img src="assets/client-4.jpg" alt="cliente" />
+          <h4>Daniel Taylor</h4>
+          <p>Malásia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="subscribe">
+    <div class="section__container subscribe__container">
+      <h2 class="section__header">Assine o boletim informativo e receba as últimas notícias</h2>
+      <form class="subscribe__form" action="processar_formulario.php" method="post">
+        <input type="text" id="campoTexto" placeholder="Insira seu e-mail aqui" />
+        <button class="btn">Assinar</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="overlay" id="contactOverlay">
+    <div class="popup">
+      <span class="close-btn" onclick="closeContactPopup()">&times;</span>
+      <h2>Informações de Contato</h2>
+      <p>Email: vitoralexandre@uni9.edu.br</p>
+      <p>Telefone: (11) 98531-5185</p>
+    </div>
+  </div>
+
+  <div id="loginPopup" class="popup">
+    <span class="close-btn" onclick="closeLoginPopup()">&times;</span>
+    <h2>Login</h2>
+    <form>
+      <label for="username">Usuário:</label>
+      <input type="text" id="username" name="username" required placeholder="Digite seu usuário">
+
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+
+      <button type="button" onclick="submitLogin()">Login</button>
+    </form>
+  </div>
+
+  <footer id="footer" class="footer">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h3>456 Milhas</h3>
+        <p>
+          Alçando Sonhos, Conectando Destinos, com um forte compromisso com a satisfação do
+          cliente e uma paixão pela aviação, a 456 Milhas Airlines oferece um serviço
+          excepcional e jornadas sem intercorrências.
+        </p>
+        <p>
+          De sorrisos amigáveis a aeronaves de última geração, conectamos o mundo,
+          garantindo experiências seguras, confortáveis e inesquecíveis.
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>INFORMAÇÕES</h4>
+        <p>Início</p>
+        <p>Sobre</p>
+        <p>Ofertas</p>
+        <p>Assentos</p>
+        <p>Destinos</p>
+      </div>
+      <div class="footer__col">
+        <h4>CONTATO</h4>
+        <p>Suporte</p>
+        <p>Mídia</p>
+        <p>Redes Sociais</p>
+      </div>
+    </div>
+    <div class="section__container footer__bar">
+      <p>Direitos Autorais © 2023 Maestria em Design Web. Todos os direitos reservados.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com" target="_blank"><span><i class="ri-facebook-fill"></i></span></a>
+        <a href="https://www.twitter.com" target="_blank"><span><i class="ri-twitter-fill"></i></span></a>
+        <a href="https://www.instagram.com" target="_blank"><span><i class="ri-instagram-line"></i></span></a>
+        <a href="https://www.youtube.com" target="_blank"><span><i class="ri-youtube-fill"></i></span></a>
+        <a href="whatsapp://send?phone=SEUNUMERODOTELEFONE" target="_blank"><span><i
+              class="ri-whatsapp-fill"></i></span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Obtenha os elementos dos botões de classe "Economia", "Executiva" e "Primeira Classe"
+      var economyButton = document.querySelector(".booking__nav span:nth-child(1)");
+      var businessButton = document.querySelector(".booking__nav span:nth-child(2)");
+      var firstClassButton = document.querySelector(".booking__nav span:nth-child(3)");
+
+      // Adicione eventos de clique aos botões
+      economyButton.addEventListener("click", function () {
+        changeButtonColor(economyButton);
+      });
+
+      businessButton.addEventListener("click", function () {
+        changeButtonColor(businessButton);
+      });
+
+      firstClassButton.addEventListener("click", function () {
+        changeButtonColor(firstClassButton);
+      });
+
+      function exibirPopup(message) {
+        var popup = document.getElementById('popup');
+        var popupMessage = document.getElementById('popupMessage');
+        popupMessage.innerHTML = message;
+        popup.style.display = 'block';
+        setTimeout(function () {
+          popup.style.display = 'none';
+        }, 3000); // O popup desaparecerá após 3 segundos (3000 milissegundos)
+      }
+
+      function fecharPopup() {
+        document.getElementById('popup').style.display = 'none';
+      }
+      // Função para alterar a cor do botão
+      function changeButtonColor(button) {
+        // Remover qualquer classe de cor existente
+        economyButton.classList.remove("active");
+        businessButton.classList.remove("active");
+        firstClassButton.classList.remove("active");
+
+        // Adicionar a classe de cor ao botão clicado
+        button.classList.add("active");
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // ...
+
+      // Adicione um evento de clique ao botão "Ver Todos"
+      var viewAllButton = document.querySelector('.view__all');
+      viewAllButton.addEventListener('click', function () {
+        // Selecione a seção com a classe 'hidden-content'
+        var hiddenContent = document.querySelector('.hidden-content');
+
+        // Alterne a visibilidade ao adicionar/remover a classe 'show'
+        if (hiddenContent) {
+          hiddenContent.classList.toggle('show');
+        }
+      });
+
+      // ...
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var subscribeButton = document.querySelector('.subscribe__form .btn');
+      var popupMessageSuccess = "Assinado com sucesso!";
+      var popupMessageError = "Por favor, insira um e-mail válido.";
+
+      subscribeButton.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevenir o envio do formulário, já que estamos tratando isso com JavaScript
+
+        // Obter o valor do campo de e-mail
+        var emailInput = document.querySelector('.subscribe__form input[type="text"]');
+        var emailValue = emailInput.value.trim();
+
+        // Verificar se o campo de e-mail está vazio
+        if (emailValue === '' || !emailValue.includes('@gmail.com')) {
+          exibirPopup(popupMessageError);
+        } else {
+          // Aqui você pode adicionar a lógica para enviar o formulário para o servidor, se necessário
+
+          // Exibir o popup de sucesso
+          exibirPopup(popupMessageSuccess);
+        }
+      });
+
+      function exibirPopup(message) {
+        var popup = document.createElement('div');
+        popup.className = 'popup_subscribe';
+        popup.innerHTML = '<p>' + message + '</p>';
+
+        document.body.appendChild(popup);
+
+        setTimeout(function () {
+          popup.style.opacity = '1';
+        }, 100);
+
+        setTimeout(function () {
+          popup.style.opacity = '0';
+        }, 3000); // O popup desaparecerá após 3 segundos (3000 milissegundos)
+
+        setTimeout(function () {
+          document.body.removeChild(popup);
+        }, 3500);
+      }
+    });
+
+    window.addEventListener('beforeunload', function () {
+      window.scrollTo(0, 0);
+    });
+
+    function openContactPopup() {
+      document.getElementById('contactOverlay').style.display = 'block';
+    }
+
+    function closeContactPopup() {
+      document.getElementById('contactOverlay').style.display = 'none';
+    }
+
+    function openLoginPopup() {
+      document.getElementById('loginPopup').style.display = 'block';
+    }
+
+    function closeLoginPopup() {
+      document.getElementById('loginPopup').style.display = 'none';
+    }
+
+    function submitLogin() {
+
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      if (username == '' || password == '') {
+        alert('Por favor, preencha todos os campos!');
+      } else {
+        alert('Login bem-sucedido');
+        closeLoginPopup();
+      }
+    }
+
+    $(document).ready(function () {
+      var destinos = ['Guarulhos - São Paulo', 'Nova York', 'Tóquio', 'Paris', /* Adicione mais destinos conforme necessário */];
+
+      $('#Localizacao').typeahead({
+        source: destinos,
+        autoSelect: true
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const campos = ['Localizacao', 'Viajantes', 'Partida', 'Retorno'];
+
+      campos.forEach(function (campo) {
+        const campoElement = document.getElementById(campo);
+        const placeholderLabel = campoElement.parentElement.querySelector('label');
+
+        campoElement.addEventListener('input', function () {
+          if (campoElement.value.trim() !== '') {
+            placeholderLabel.style.opacity = '0';
+          } else {
+            placeholderLabel.style.opacity = '1';
+          }
+        });
+      });
+    });
+
+    var campoTexto = document.getElementById('campoTexto');
+
+    // Verifica se há um valor armazenado no localStorage
+    if (localStorage.getItem('ultimoEmail')) {
+      // Se houver, atribui esse valor ao campo de texto
+      campoTexto.value = localStorage.getItem('ultimoEmail');
+    }
+
+    // Adiciona um ouvinte de evento para o evento de mudança no campo de texto
+    campoTexto.addEventListener('input', function () {
+      // Salva o valor do campo de texto no localStorage
+      localStorage.setItem('ultimoEmail', campoTexto.value);
+    });
+
+  </script>
+
+</body>
+
+</html>
